@@ -1,6 +1,6 @@
 repositories {
-    jcenter()
     mavenLocal()
+    jcenter()
 }
 
 buildscript{
@@ -32,7 +32,3 @@ dependencies {
     compile 'net.serenity-bdd:serenity-screenplay-webdriver:2.0.9'
 }
 gradle.startParameter.continueOnFailure = true
-
-test {
-    useJUnitPlatform()
-}
