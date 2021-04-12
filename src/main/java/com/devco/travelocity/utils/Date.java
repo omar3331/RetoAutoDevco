@@ -10,6 +10,7 @@ import java.util.Calendar;
 
 public class Date {
 
+    private static Calendar day;
     private static Calendar calendar;
     private static LocalDate localDate;
     private static final String FORMAT = "yyyy-MM-dd";
@@ -27,5 +28,15 @@ public class Date {
             throw new DateException(DateException.MESSAGE_FAILED_GET_DATE, e);
         }
 
+    }
+
+    public static int start(int startDay){
+        day = dateSys();
+        return day.get(Calendar.DAY_OF_MONTH)+startDay;
+    }
+
+    public static int end(int endDay){
+        day = dateSys();
+        return day.get(Calendar.DAY_OF_MONTH)+endDay;
     }
 }

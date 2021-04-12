@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.css">
+<link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/v4-shims.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.css">
+<link rel="stylesheet" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Prueba de Serenity con ScreenPlay</span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="b6a3eaa6aca2f071826d26d9013ad7edc43177d3a8998d98aa1ec00fd175be91.html">Select Flights In Travelocity</a></span>
+                > <span class="truncate-60"><a
+                    href="40f6551318031843f24d62d79aa9c250d5b487aa6dfcc0ad10c74cc0a4726788.html">Selecting the round trip </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 11-04-2021 19:16</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Select Flights In Travelocity </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="57d1b69a7dc50823c8091e16642089ef4789d62ed24634065ab9b7a27653fe5b.html">Tag2
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Selecting the round trip
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="707abe5fb684611e769537412da31981eb073202fd3221c068f3c19da9208372.png" title="Omar opens the browser on the Travelocity Home Page" width="1920"/>
+                <img src="707abe5fb684611e769537412da31981eb073202fd3221c068f3c19da9208372.png" title="Omar opens the Travelocity home page" width="1920"/>
+                <img src="0eb79afa913a525381815b7616e476229229cf9f49246553a5fd2f41c68afced.png" title="Given the user want to select a round trip between &quot;medellin&quot; and &quot;San Andres&quot;" width="1920"/>
+                <img src="57046ddf2a1f1d27fd809715715922632cc668f7a33e2d07d0b51a4e59207117.png" title="Omar clicks on Button flights" width="1920"/>
+                <img src="57046ddf2a1f1d27fd809715715922632cc668f7a33e2d07d0b51a4e59207117.png" title="Omar clicks on Origin city field" width="1920"/>
+                <img src="eec39850d609e18c8b5c4c6e41989176b6b866f8ecfeaeec5f0ede1f9862739f.png" title="Omar clicks on Origin city field" width="1920"/>
+                <img src="884d2b59cce945d9975b558dd19a3fbc1d323b1018573e2cbb23fb932a056662.png" title="Omar enters 'medellin' into Origin city text field" width="1920"/>
+                <img src="a8dd81e1c5712d72261efc51bfd13527d7132b41d66613770eb8bd9edf39722f.png" title="Omar enters 'medellin' into Origin city text field" width="1920"/>
+                <img src="a8dd81e1c5712d72261efc51bfd13527d7132b41d66613770eb8bd9edf39722f.png" title="Then The first item on the list origin should be an element that is enabled" width="1920"/>
+                <img src="4576d9a8459295bf52b122ccd15ec77fe59d92260b56cdf301db642966597e05.png" title="Then The first item on the list origin should be an element that is enabled" width="1920"/>
+                <img src="4576d9a8459295bf52b122ccd15ec77fe59d92260b56cdf301db642966597e05.png" title="Omar clicks on The first item on the list origin" width="1920"/>
+                <img src="6d140afc6f452936db389fdf83d8a60cfb5069483e8a5e349c3173bdc8f0bf7b.png" title="Omar clicks on The first item on the list origin" width="1920"/>
+                <img src="6d140afc6f452936db389fdf83d8a60cfb5069483e8a5e349c3173bdc8f0bf7b.png" title="Omar clicks on Destiny city field" width="1920"/>
+                <img src="8bf3552ff6919f99c112d6fcbdc44aa58a4647aa75de7a4231cfc739049eb699.png" title="Omar clicks on Destiny city field" width="1920"/>
+                <img src="6329431bf6a41be8f16d821a406273eab898eee228c99857e6eb7f83b293e35f.png" title="Omar enters 'San Andres' into Destiny city text field" width="1920"/>
+                <img src="32e8f4845b9e10959208a2b98f4770dd7863ca6f5bc2ff6487139262cbab6c96.png" title="Omar enters 'San Andres' into Destiny city text field" width="1920"/>
+                <img src="61663a446d1b44e4a6e1d06bb2374447b2c5796a48df832275e0338e7530cd2f.png" title="Then Destiny city text field should be an element that is enabled" width="1920"/>
+                <img src="b13015f4fac3e7e9562a693ae4805ab69a63b6553183222eb809ec691446ced4.png" title="Omar clicks on The first item on the list destiny" width="1920"/>
+                <img src="d83778a92cdb97885eab6e7f1fc2c595d5dfbfd704d2cbffab1406dc652ad573.png" title="Omar clicks on The first item on the list destiny" width="1920"/>
+                <img src="d83778a92cdb97885eab6e7f1fc2c595d5dfbfd704d2cbffab1406dc652ad573.png" title="Omar clicks on Date to travel" width="1920"/>
+                <img src="621b8cb7b216ef8a38db35a0b18b6fe0f68bfd55668fb9a387607acc5d1fddf1.png" title="Omar clicks on Date to travel" width="1920"/>
+                <img src="621b8cb7b216ef8a38db35a0b18b6fe0f68bfd55668fb9a387607acc5d1fddf1.png" title="Then Calendar to select travel dates should be an element that is present" width="1920"/>
+                <img src="621b8cb7b216ef8a38db35a0b18b6fe0f68bfd55668fb9a387607acc5d1fddf1.png" title="Omar clicks on #target" width="1920"/>
+                <img src="c9ecf6a3aa0618cb3923440ea1f2f08546894df536f42f7cbca93d9115a48389.png" title="Omar clicks on #target" width="1920"/>
+                <img src="c9ecf6a3aa0618cb3923440ea1f2f08546894df536f42f7cbca93d9115a48389.png" title="Omar clicks on button to select travel dates" width="1920"/>
+                <img src="5027bc20e9216d6079fb97bb5081837dddf65d479a30e0ffa11fa896d343ee73.png" title="Omar clicks on button to select travel dates" width="1920"/>
+                <img src="5027bc20e9216d6079fb97bb5081837dddf65d479a30e0ffa11fa896d343ee73.png" title="Omar clicks on Date to travel" width="1920"/>
+                <img src="11d22d74d5c4d06a4e336bfcb8a734189ba4b30d4ef87bd1821b7680817f9961.png" title="Omar clicks on Date to travel" width="1920"/>
+                <img src="11d22d74d5c4d06a4e336bfcb8a734189ba4b30d4ef87bd1821b7680817f9961.png" title="Then Calendar to select travel dates should be an element that is present" width="1920"/>
+                <img src="11d22d74d5c4d06a4e336bfcb8a734189ba4b30d4ef87bd1821b7680817f9961.png" title="Omar clicks on #target" width="1920"/>
+                <img src="8301f27c8d2edb1409b167505d66b3b3f06929dad0392042f7ceeb351789f4fc.png" title="Omar clicks on #target" width="1920"/>
+                <img src="8301f27c8d2edb1409b167505d66b3b3f06929dad0392042f7ceeb351789f4fc.png" title="Omar clicks on button to select travel dates" width="1920"/>
+                <img src="2370a2510b97a89e6f9a09ede858e54e113b7e470a4a4845e192bd3a5843eb20.png" title="Omar clicks on button to select travel dates" width="1920"/>
+                <img src="2370a2510b97a89e6f9a09ede858e54e113b7e470a4a4845e192bd3a5843eb20.png" title="Omar clicks on button to perform the search" width="1920"/>
+                <img src="05b77c0c848983b403dc9139ae8e2ada43b3aefc5a8d29a7f79216c5195003f6.png" title="Omar clicks on button to perform the search" width="1920"/>
+                <img src="fd0cac352dbd547533a81d166cd5984158937d6041d37d3baf7b86d4487ed3ba.png" title="When he selected the shortest flights" width="1920"/>
+                <img src="f14b8c41ff2f04776e8022d1a9910a27ecc25d8a733193dfd80b56550c8ca7e1.png" title="When he selected the shortest flights" width="1920"/>
+                <img src="e6db83689535398b17b4cae6cf7837819d24e87ab87bdff63a268e778e5fb9b0.png" title="Omar clicks on Order the List of available flights" width="1920"/>
+                <img src="be1f4860d37347645cd89d3df05bd7756a75adaabddf0014295d757e8652278b.png" title="Omar clicks on Order the List of available flights" width="1920"/>
+                <img src="be1f4860d37347645cd89d3df05bd7756a75adaabddf0014295d757e8652278b.png" title="Omar clicks on Option from the list, shortest duration" width="1920"/>
+                <img src="ce390ef9f884bdb6e065d1b553810f0b28e7926d9a28abfc43e2d549f2c33625.png" title="Omar clicks on Option from the list, shortest duration" width="1920"/>
+                <img src="c11192053677f3497ae50b1a0c9fb184540aea8f48e757881cdea4b6d371c6b4.png" title="Omar clicks on First flight of the list" width="1920"/>
+                <img src="0a2a5c7f915a93493c5a89e9c91f3b005f2052e980c2852e9e0cca0e012b23fa.png" title="Omar clicks on First flight of the list" width="1920"/>
+                <img src="0a2a5c7f915a93493c5a89e9c91f3b005f2052e980c2852e9e0cca0e012b23fa.png" title="Omar clicks on Button to continue with the purchase" width="1920"/>
+                <img src="703104c39d183ea7700e3e6dd46f206c18ecd28701ff1aac1488ceb3f1a7431e.png" title="Omar clicks on Button to continue with the purchase" width="1920"/>
+                <img src="dccf75b48d2aa056526a9724cd8d76823d17ff47f55e72c3b58a40703a57c737.png" title="Omar clicks on Order the List of available flights" width="1920"/>
+                <img src="c5c2dc60a2f85226dce9ab4e2795346d2ffed5bfb41e14beeb283b8533870185.png" title="Omar clicks on Order the List of available flights" width="1920"/>
+                <img src="513399d2e2e9fdbb9e253c572284bd5d485ca577001109d7159758486a7e0c06.png" title="Omar clicks on Option from the list, earliest departure" width="1920"/>
+                <img src="e059553a167e72101f95a6d8163a10e067f2d9e67f528975e216a6d79d7a68a0.png" title="Omar clicks on Option from the list, earliest departure" width="1920"/>
+                <img src="0c27c906dec375c7711ddb0e52319bc8d34d635e27282b122cdd97e565474ffd.png" title="Omar clicks on First flight of the list" width="1920"/>
+                <img src="c0a77900b1e8865db809a513cdaf56b9253b64ecf5c05b34b093fb411a96ec6d.png" title="Omar clicks on First flight of the list" width="1920"/>
+                <img src="c0a77900b1e8865db809a513cdaf56b9253b64ecf5c05b34b093fb411a96ec6d.png" title="Omar clicks on Button to continue with the purchase" width="1920"/>
+                <img src="beb985cdabc586b792378e9f6a4a0a2156e27af763bb7392a1108898f8b3caa8.png" title="Omar clicks on Button to continue with the purchase" width="1920"/>
+                <img src="beb985cdabc586b792378e9f6a4a0a2156e27af763bb7392a1108898f8b3caa8.png" title="Omar clicks on Button to ignore the hotel search" width="1920"/>
+                <img src="c0a77900b1e8865db809a513cdaf56b9253b64ecf5c05b34b093fb411a96ec6d.png" title="Omar clicks on Button to ignore the hotel search" width="1920"/>
+                <img src="c58ece69b398f8acad373d4fd63e1dffbe86b94bb2553339e01ab8240f2ee4d2.png" title="Then he check both of them flights &quot;selected&quot;" width="1920"/>
+                <img src="d48f213041b1fd872844a5a4b01a3483464278f492b724236fec8a066c344ae3.png" title="Then he check both of them flights &quot;selected&quot;" width="1920"/>
+                <img src="05cc889d5f2a995e68684d96230282868eac0b8379b7b33a3b37f378b48a33bf.png" title="Then selected" width="1920"/>
+                <img src="f14b8c41ff2f04776e8022d1a9910a27ecc25d8a733193dfd80b56550c8ca7e1.png" title="Then selected: <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.0.11</span>
+</div>
+</body>
+</html>

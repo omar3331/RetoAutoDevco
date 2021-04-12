@@ -2,10 +2,11 @@ package com.devco.travelocity.stepdefinitions;
 
 import com.devco.travelocity.models.BetweenModel;
 import com.devco.travelocity.questions.Selected;
-import com.devco.travelocity.tasks.OpenTheBrowser;
-import com.devco.travelocity.tasks.SelectCities;
-import com.devco.travelocity.tasks.SelectFlight;
-import com.devco.travelocity.tasks.SelectRound;
+import com.devco.travelocity.tasks.*;
+import com.devco.travelocity.tasks.flights.SelectCities;
+import com.devco.travelocity.tasks.flights.SelectFlight;
+import com.devco.travelocity.tasks.flights.SelectRound;
+import com.devco.travelocity.tasks.flights.SelectRoundFlights;
 import com.devco.travelocity.userinterfaces.TravelocityHomePage;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -14,7 +15,6 @@ import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
-import static net.serenitybdd.screenplay.EventualConsequence.eventually;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -32,7 +32,7 @@ public class SearchFlightStepDefinitions {
 
     @Given("^the user is travelocity page, he select a travel between (.*) and (.*)$")
     public void theUserIsTravelocityPageHeSelectATravelBetweenAnd(String origin, String destiny) {
-        theActorInTheSpotlight().attemptsTo(
+        theActorInTheSpotlight().wasAbleTo(
                 SelectCities.forFlight(new BetweenModel(origin, destiny))
         );
     }
@@ -47,16 +47,16 @@ public class SearchFlightStepDefinitions {
     }
 
 
-    @Then("^he check if the selected flight is the correct$")
-    public void heCheckIfTheSelectedFlightIsTheCorrect() {
+    @Then("^he check if the selected flight is the \"([^\"]*)\"$")
+    public void heCheckIfTheSelectedFlightIsThe(String type) {
         theActorInTheSpotlight().should(
-                seeThat(Selected.flight())
+                seeThat(Selected.flight(type))
         );
     }
 
     @Given("^the user want to select a round trip between \"([^\"]*)\" and \"([^\"]*)\"$")
     public void theUserWantToSelectARoundTripBetweenAnd(String origin, String destiny) {
-        theActorInTheSpotlight().attemptsTo(
+        theActorInTheSpotlight().wasAbleTo(
                 SelectRound.trip(new BetweenModel(origin, destiny))
         );
     }
@@ -64,12 +64,17 @@ public class SearchFlightStepDefinitions {
 
     @When("^he selected the shortest flights$")
     public void heSelectedTheShortestFlights() {
+        theActorInTheSpotlight().attemptsTo(
+                SelectRoundFlights.toTravel()
+        );
 
     }
 
-    @Then("^he check both of them flights selected$")
-    public void heCheckBothOfThemFlightsSelected() {
-
+    @Then("^he check both of them flights \"([^\"]*)\"$")
+    public void heCheckBothOfThemFlights(String type) {
+        theActorInTheSpotlight().should(
+                seeThat(Selected.flight(type))
+        );
     }
 
 
