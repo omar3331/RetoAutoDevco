@@ -1,9 +1,8 @@
 package com.devco.travelocity.tasks.flights;
 
 import com.devco.travelocity.exceptions.CanNotFindTheElementOfThePageException;
+import com.devco.travelocity.interactions.SelectTwo;
 import com.devco.travelocity.models.BetweenModel;
-import com.devco.travelocity.userinterfaces.TravelocityHomePage;
-import com.devco.travelocity.utils.Date;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
@@ -13,23 +12,16 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import static com.devco.travelocity.userinterfaces.TravelocityHomePage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isPresent;
 
 public class SelectRound implements Task {
 
     private BetweenModel cities;
-    private int dayToTravel;
-    private int dayToReturn;
-    private TravelocityHomePage travelDays;
 
     public SelectRound(BetweenModel cities){
         this.cities = cities;
     }
     @Override
     public <T extends Actor> void performAs(T actor) {
-
-        dayToTravel = Date.start(6);
-        dayToReturn = Date.end(15);
 
         try {
             actor.attemptsTo(
@@ -46,16 +38,7 @@ public class SelectRound implements Task {
             );
 
             actor.attemptsTo(
-                    WaitUntil.the(CALENDAR, isPresent()).forNoMoreThan(2).seconds(),
-                    Click.on(travelDays.listDays().get(dayToTravel)),
-                    Click.on(DONE_CALENDAR_BUTTON),
-                    Click.on(RETURN_DAY)
-            );
-
-            actor.attemptsTo(
-                    WaitUntil.the(CALENDAR, isPresent()).forNoMoreThan(2).seconds(),
-                    Click.on(travelDays.listDays().get(dayToReturn)),
-                    Click.on(DONE_CALENDAR_BUTTON),
+                    SelectTwo.dates(6,15),
                     Click.on(SEARCH_BUTTON)
             );
 

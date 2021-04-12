@@ -1,8 +1,7 @@
 package com.devco.travelocity.tasks;
 
 import com.devco.travelocity.exceptions.CanNotFindTheElementOfThePageException;
-import com.devco.travelocity.userinterfaces.TravelocityHomePage;
-import com.devco.travelocity.utils.Date;
+import com.devco.travelocity.interactions.SelectTwo;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
@@ -12,14 +11,10 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import static com.devco.travelocity.userinterfaces.TravelocityHomePage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isPresent;
 
 public class SearchThingsToDo implements Task {
 
     private String city;
-    private int startDay;
-    private int endDay;
-    private TravelocityHomePage dateToDo;
 
     public SearchThingsToDo(String city){
         this.city = city;
@@ -27,9 +22,6 @@ public class SearchThingsToDo implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-
-        startDay = Date.start(3);
-        endDay = Date.end(8);
 
         try{
             actor.attemptsTo(
@@ -43,16 +35,7 @@ public class SearchThingsToDo implements Task {
             );
 
             actor.attemptsTo(
-                    WaitUntil.the(CALENDAR, isPresent()).forNoMoreThan(2).seconds(),
-                    Click.on(dateToDo.listDays().get(startDay)),
-                    Click.on(DONE_CALENDAR_BUTTON),
-                    Click.on(RETURN_DAY)
-            );
-
-            actor.attemptsTo(
-                    WaitUntil.the(CALENDAR, isPresent()).forNoMoreThan(2).seconds(),
-                    Click.on(dateToDo.listDays().get(endDay)),
-                    Click.on(DONE_CALENDAR_BUTTON),
+                    SelectTwo.dates(3,8),
                     Click.on(SEARCH_BUTTON)
             );
 

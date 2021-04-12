@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="2" failures="1" name="Select the cheapest flight in travelocity" skipped="0" tests="3" time="198.81" timestamp="2021-04-11 03:08:50"><testcase name="Selecting the cheapest flight one way today"><error message="Could not find the element on the selected flight page" type="java.lang.AssertionError">Could not find the element on the selected flight page</error><system-err>Could not find the element on the selected flight page&#13;
-com.devco.travelocity.stepdefinitions.SearchFlightStepDefinitions.heCheckIfTheSelectedFlightIsTheCorrect(SearchFlightStepDefinitions.java:52)&#13;
-✽.he check if the selected flight is the correct(src/test/resources/features/search_flight.feature:10)&#13;
-</system-err></testcase></testsuite>
