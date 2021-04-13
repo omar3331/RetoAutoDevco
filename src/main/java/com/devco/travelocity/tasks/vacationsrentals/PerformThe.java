@@ -12,21 +12,21 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 public class PerformThe implements Task {
 
 
+    public static PerformThe search() {
+        return instrumented(PerformThe.class);
+    }
+
     @Override
     public <T extends Actor> void performAs(T actor) {
-        try{
+        try {
             actor.attemptsTo(
                     Click.on(VACATION_RENTALS_BUTTON),
                     Click.on(SEARCH_BUTTON)
             );
 
-        }catch (Exception e){
+        } catch (Exception e) {
             throw new CanNotFindTheElementOfThePageException(CanNotFindTheElementOfThePageException.FAILED_LOCATION_ELEMENTS_ROAM_NEAR_HOME_PAGE, e);
         }
 
-    }
-
-    public static PerformThe search() {
-        return instrumented(PerformThe.class);
     }
 }

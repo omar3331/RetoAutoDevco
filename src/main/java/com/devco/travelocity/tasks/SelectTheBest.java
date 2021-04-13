@@ -7,7 +7,11 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Scroll;
 
-import static com.devco.travelocity.userinterfaces.HotelsPage.*;
+import static com.devco.travelocity.userinterfaces.HotelsPage.BEDROOMS_SELECT;
+import static com.devco.travelocity.userinterfaces.HotelsPage.FIVE_STARS_SELECT;
+import static com.devco.travelocity.userinterfaces.HotelsPage.FOUR_HOTEL_OF_LIST;
+import static com.devco.travelocity.userinterfaces.HotelsPage.NAME_FOUR_HOTEL_OF_LIST;
+import static com.devco.travelocity.userinterfaces.HotelsPage.THE_BEST_RATING_SELECT;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class SelectTheBest implements Task {
@@ -22,9 +26,13 @@ public class SelectTheBest implements Task {
         SelectTheBest.hotelName = hotelName;
     }
 
+    public static SelectTheBest hotel() {
+        return instrumented(SelectTheBest.class);
+    }
+
     @Override
     public <T extends Actor> void performAs(T actor) {
-        try{
+        try {
             actor.attemptsTo(
                     Click.on(FIVE_STARS_SELECT),
                     Scroll.to(THE_BEST_RATING_SELECT),
@@ -40,12 +48,8 @@ public class SelectTheBest implements Task {
                     SwitchTo.newTab()
             );
 
-        }catch (Exception e){
+        } catch (Exception e) {
             throw new CanNotFindTheElementOfThePageException(CanNotFindTheElementOfThePageException.FAILED_LOCATION_ELEMENTS_SELECT_HOTEL_PAGE, e);
         }
-    }
-
-    public static SelectTheBest hotel() {
-        return instrumented(SelectTheBest.class);
     }
 }

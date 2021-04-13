@@ -10,33 +10,33 @@ import java.util.Calendar;
 
 public class Date {
 
+    private static final String FORMAT = "yyyy-MM-dd";
     private static Calendar day;
     private static Calendar calendar;
     private static LocalDate localDate;
-    private static final String FORMAT = "yyyy-MM-dd";
 
     public static Calendar dateSys() {
 
-        try{
+        try {
             DateFormat df = new SimpleDateFormat(FORMAT);
             Calendar newCalendar = Calendar.getInstance();
             df.setLenient(false);
             localDate = LocalDate.now();
             newCalendar.setTime(df.parse(localDate.toString()));
             return newCalendar;
-        }catch (ParseException e){
+        } catch (ParseException e) {
             throw new DateException(DateException.MESSAGE_FAILED_GET_DATE, e);
         }
 
     }
 
-    public static int start(int startDay){
+    public static int start(int startDay) {
         day = dateSys();
-        return day.get(Calendar.DAY_OF_MONTH)+startDay;
+        return day.get(Calendar.DAY_OF_MONTH) + startDay;
     }
 
-    public static int end(int endDay){
+    public static int end(int endDay) {
         day = dateSys();
-        return day.get(Calendar.DAY_OF_MONTH)+endDay;
+        return day.get(Calendar.DAY_OF_MONTH) + endDay;
     }
 }

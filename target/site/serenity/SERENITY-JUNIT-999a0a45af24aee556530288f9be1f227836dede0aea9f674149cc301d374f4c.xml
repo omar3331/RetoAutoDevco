@@ -1,1 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Select flights in travelocity" skipped="0" tests="5" time="310.49" timestamp="2021-04-12 08:29:20"><testcase name="Selecting the cheapest flight one way the next week"/><testcase name="Selecting the round trip"/><testcase name="Fail to search a flight"/></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Select flights in travelocity" skipped="0" tests="5" time="327.04" timestamp="2021-04-12 10:29:10"><testcase name="Selecting the cheapest flight one way the next week"/><testcase name="Selecting the round trip"><error message="Could not instantiate class org.openqa.selenium.chrome.ChromeDriver" type="net.thucydides.core.webdriver.UnsupportedDriverException">Could not instantiate class org.openqa.selenium.chrome.ChromeDriver</error><system-err>Could not instantiate class org.openqa.selenium.chrome.ChromeDriver&#13;
+com.devco.travelocity.tasks.OpenTheBrowser.performAs(OpenTheBrowser.java:28)&#13;
+com.devco.travelocity.stepdefinitions.SearchFlightStepDefinitions.setup(SearchFlightStepDefinitions.java:30)&#13;
+cucumber.runner.UnskipableStep.executeStep(UnskipableStep.java:22)&#13;
+cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
+</system-err></testcase><testcase name="Fail to search a flight"/></testsuite>

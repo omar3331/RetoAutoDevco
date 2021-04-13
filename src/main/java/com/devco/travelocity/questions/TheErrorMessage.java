@@ -7,18 +7,18 @@ import static com.devco.travelocity.userinterfaces.RoamNearHomePage.ERROR_MESSAG
 
 public class TheErrorMessage implements Question<Boolean> {
 
-    private String message;
+    private final String message;
 
     public TheErrorMessage(String message) {
         this.message = message;
     }
 
+    public static TheErrorMessage inScreen(String message) {
+        return new TheErrorMessage(message);
+    }
+
     @Override
     public Boolean answeredBy(Actor actor) {
         return message.equals(ERROR_MESSAGE_WITHOUT_CITY.resolveFor(actor).getText());
-    }
-
-    public static TheErrorMessage inScreen(String message) {
-        return new TheErrorMessage(message);
     }
 }

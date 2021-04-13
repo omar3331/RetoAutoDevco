@@ -10,10 +10,10 @@ Feature: Select flights in travelocity
     Then he check if the selected flight is the "correct"
 
     Examples:
-    |    origin   |   destiny    |
-    |   medellin  |    bogota    |
-    |     cali    | barranquilla |
-    | Los Angeles |   Baltimore  |
+      | origin      | destiny      |
+      | medellin    | bogota       |
+      | cali        | barranquilla |
+      | Los Angeles | Baltimore    |
 
   @tag2
   Scenario: Selecting the round trip

@@ -4,7 +4,6 @@ import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.annotations.DefaultUrl;
-import org.apache.tools.ant.taskdefs.Tar;
 import org.openqa.selenium.By;
 
 import java.util.List;
@@ -45,6 +44,8 @@ public class TravelocityHomePage extends PageObject {
 
     public static final Target TRAVEL_LOCALLY_OPTION = Target.the("Option to travel locally").located(By.id("native-ad-NMC1"));
 
-    public List<WebElementFacade> listDays(){ return findAll(By.xpath("//td[@class='uitk-date-picker-day-number']")); }
+    public List<WebElementFacade> listDays() {
+        return findAll(By.xpath("//td[@class='uitk-date-picker-day-number']"));
+    }
 
 }

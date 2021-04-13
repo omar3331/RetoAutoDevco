@@ -12,21 +12,21 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 public class SelectTheFirst implements Task {
 
 
+    public static SelectTheFirst hotel() {
+        return instrumented(SelectTheFirst.class);
+    }
+
     @Override
     public <T extends Actor> void performAs(T actor) {
-        try{
+        try {
             actor.attemptsTo(
                     Click.on(FIRST_HOTEL_OF_LIST),
                     SwitchTo.newTab()
             );
 
-        }catch (Exception e){
-            throw new CanNotFindTheElementOfThePageException(CanNotFindTheElementOfThePageException.FAILED_LOCATION_ELEMENTS_SELECT_HOTEL_PAGE,e);
+        } catch (Exception e) {
+            throw new CanNotFindTheElementOfThePageException(CanNotFindTheElementOfThePageException.FAILED_LOCATION_ELEMENTS_SELECT_HOTEL_PAGE, e);
         }
 
-    }
-
-    public static SelectTheFirst hotel() {
-        return instrumented(SelectTheFirst.class);
     }
 }

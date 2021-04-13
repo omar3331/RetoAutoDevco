@@ -12,22 +12,22 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 public class SelectVacations implements Task {
 
 
+    public static SelectVacations rentals() {
+        return instrumented(SelectVacations.class);
+    }
+
     @Override
     public <T extends Actor> void performAs(T actor) {
 
-        try{
+        try {
             actor.attemptsTo(
                     Scroll.to(TRAVEL_LOCALLY_OPTION),
                     Click.on(TRAVEL_LOCALLY_OPTION)
             );
 
-        }catch (Exception e){
+        } catch (Exception e) {
             throw new CanNotFindTheElementOfThePageException(CanNotFindTheElementOfThePageException.FAILED_LOCATION_ELEMENTS_HOME_PAGE, e);
         }
 
-    }
-
-    public static SelectVacations rentals() {
-        return instrumented(SelectVacations.class);
     }
 }

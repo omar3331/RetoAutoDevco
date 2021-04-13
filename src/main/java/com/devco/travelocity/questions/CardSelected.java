@@ -10,18 +10,19 @@ import static com.devco.travelocity.userinterfaces.ThingsToDoPage.TITLE_SELECTED
 public class CardSelected implements Question<Boolean> {
 
     private String title;
+
+    public static CardSelected info() {
+        return new CardSelected();
+    }
+
     @Override
     public Boolean answeredBy(Actor actor) {
         try {
             title = TITLE_SELECTED_THING.resolveFor(actor).getText();
 
-        }catch (Exception e){
+        } catch (Exception e) {
             throw new CanNotFindTheElementOfThePageException(CanNotFindTheElementOfThePageException.FAILED_LOCATION_ELEMENTS_THINGS_TO_DO_PAGE, e);
         }
         return title.equals(SelectThings.getSelectedCard());
-    }
-
-    public static CardSelected info() {
-        return new CardSelected();
     }
 }

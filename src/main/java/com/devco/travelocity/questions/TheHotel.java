@@ -9,13 +9,13 @@ import static com.devco.travelocity.userinterfaces.HotelsPage.NAME_HOTEL_SELECTE
 public class TheHotel implements Question<Boolean> {
 
 
+    public static TheHotel heSelected() {
+        return new TheHotel();
+    }
+
     @Override
     public Boolean answeredBy(Actor actor) {
         return SelectTheBest.getHotelName().equals(NAME_HOTEL_SELECTED.resolveFor(actor).getText());
-    }
-
-    public static TheHotel heSelected() {
-        return new TheHotel();
     }
 
 }

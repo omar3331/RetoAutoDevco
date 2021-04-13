@@ -11,23 +11,23 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class OpenTheBrowser implements Task {
 
-    private PageObject url;
+    private final PageObject url;
 
-    public OpenTheBrowser(PageObject url){
+    public OpenTheBrowser(PageObject url) {
         this.url = url;
+    }
+
+    public static OpenTheBrowser on(PageObject url) {
+        return instrumented(OpenTheBrowser.class, url);
     }
 
     @Override
     @Step("{0} opens the browser on the Travelocity Home Page")
     public <T extends Actor> void performAs(T actor) {
-        try{
+        try {
             actor.attemptsTo(Open.browserOn(url));
-        }catch (Exception e){
+        } catch (Exception e) {
             throw new OpenTheBrowserException(OpenTheBrowserException.MESSAGE_FAILED_OPENBROWSER, e);
         }
-    }
-
-    public static OpenTheBrowser on(PageObject url){
-        return instrumented(OpenTheBrowser.class, url);
     }
 }

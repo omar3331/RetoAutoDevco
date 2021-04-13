@@ -6,7 +6,13 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 
-import static com.devco.travelocity.userinterfaces.AvailableFlightsPage.*;
+import static com.devco.travelocity.userinterfaces.AvailableFlightsPage.CONTINUE_BUTTON;
+import static com.devco.travelocity.userinterfaces.AvailableFlightsPage.EARLY_DEPARTURE_OPTION;
+import static com.devco.travelocity.userinterfaces.AvailableFlightsPage.FIRST_FLIGHT_LIST;
+import static com.devco.travelocity.userinterfaces.AvailableFlightsPage.FLIGHT_TIME;
+import static com.devco.travelocity.userinterfaces.AvailableFlightsPage.IGNORE_SEARCH;
+import static com.devco.travelocity.userinterfaces.AvailableFlightsPage.SHORT_DURATION_OPTION;
+import static com.devco.travelocity.userinterfaces.AvailableFlightsPage.SORT_BY_BUTTON;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class SelectRoundFlights implements Task {
@@ -28,6 +34,10 @@ public class SelectRoundFlights implements Task {
 
     public static void setReturnFlight(String returnFlight) {
         SelectRoundFlights.returnFlight = returnFlight;
+    }
+
+    public static SelectRoundFlights toTravel() {
+        return instrumented(SelectRoundFlights.class);
     }
 
     @Override
@@ -61,12 +71,8 @@ public class SelectRoundFlights implements Task {
                     SwitchTo.newTab()
             );
 
-        }catch (Exception e){
+        } catch (Exception e) {
             throw new CanNotFindTheElementOfThePageException(CanNotFindTheElementOfThePageException.FAILED_LOCATION_ELEMENTS_SELECT_FLIGHT_PAGE, e);
         }
-    }
-
-    public static SelectRoundFlights toTravel() {
-        return instrumented(SelectRoundFlights.class);
     }
 }

@@ -13,33 +13,34 @@ public class Selected implements Question<Boolean> {
     private String departureHour;
     private String returnHour;
     private boolean comprobation = false;
-    private String type;
+    private final String type;
 
-    public Selected(String type){
+    public Selected(String type) {
         this.type = type;
     }
+
+    public static Selected flight(String type) {
+        return new Selected(type);
+    }
+
     @Override
     public Boolean answeredBy(Actor actor) {
-        try{
+        try {
             departureHour = DEPARTURE_FLIGHT_TIME_SELECTED.resolveFor(actor).getText();
 
             comprobation = departureHour.equals(SelectFlight.getFlightHour());
 
-            if("selected".equals(type)){
+            if ("selected".equals(type)) {
                 returnHour = RETURN_FLIGHT_TIME_SELECTED.resolveFor(actor).getText();
 
                 comprobation = (departureHour.equals(SelectRoundFlights.getDepartureFlight()) &&
                         returnHour.equals(SelectRoundFlights.getReturnFlight()));
             }
 
-        }catch (Exception e){
+        } catch (Exception e) {
             throw new CanNotFindTheElementOfThePageException(CanNotFindTheElementOfThePageException.FAILED_LOCATION_ELEMENTS_SELECTED_FLIGHT_PAGE, e);
         }
 
         return comprobation;
-    }
-
-    public static Selected flight(String type) {
-        return new Selected(type);
     }
 }

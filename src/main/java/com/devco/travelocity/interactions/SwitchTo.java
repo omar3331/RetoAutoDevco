@@ -9,6 +9,10 @@ import org.openqa.selenium.WebDriver;
 public class SwitchTo implements Interaction {
 
 
+    public static SwitchTo newTab() {
+        return new SwitchTo();
+    }
+
     @Override
     public <T extends Actor> void performAs(T actor) {
 
@@ -22,12 +26,8 @@ public class SwitchTo implements Interaction {
                     break;
                 }
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             throw new SwitchToTabException(SwitchToTabException.FAILED_SWITCH_TAB, e);
         }
-    }
-
-    public static SwitchTo newTab(){
-        return new SwitchTo();
     }
 }

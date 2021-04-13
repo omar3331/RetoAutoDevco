@@ -2,19 +2,19 @@ package com.devco.travelocity.models;
 
 public class BetweenModel {
 
-    private String origin;
-    private String destiny;
+    private final String origin;
+    private final String destiny;
 
-    public BetweenModel(String origin, String destiny){
+    public BetweenModel(String origin, String destiny) {
         this.origin = origin;
         this.destiny = destiny;
     }
 
-    public String getOrigin(){
+    public String getOrigin() {
         return origin;
     }
 
-    public String getDestiny(){
+    public String getDestiny() {
         return destiny;
     }
 }
