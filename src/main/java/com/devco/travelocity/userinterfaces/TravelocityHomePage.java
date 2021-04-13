@@ -40,6 +40,8 @@ public class TravelocityHomePage extends PageObject {
     public static final Target CALENDAR = Target.the("Calendar to select travel dates").locatedBy("//div[@class='uitk-flex uitk-flex-row uitk-flex-gap-three uitk-flex-item uitk-date-fields uitk-flex-grow-1 ']");
     public static final Target DONE_CALENDAR_BUTTON = Target.the("button to select travel dates").locatedBy("//button[@data-stid='apply-date-picker']");
     public static final Target SEARCH_BUTTON = Target.the("button to perform the search").locatedBy("//button[@data-testid='submit-button']");
+    public static final Target ERROR_MESSAGE_ONE_WAY = Target.the("Message to search flight without destiny city").locatedBy("//h3[@class='uitk-error-summary-heading']");
+
 
     public static final Target TRAVEL_LOCALLY_OPTION = Target.the("Option to travel locally").located(By.id("native-ad-NMC1"));
 

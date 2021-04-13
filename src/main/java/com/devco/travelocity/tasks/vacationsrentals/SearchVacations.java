@@ -2,7 +2,6 @@ package com.devco.travelocity.tasks.vacationsrentals;
 
 import com.devco.travelocity.exceptions.CanNotFindTheElementOfThePageException;
 import com.devco.travelocity.interactions.SelectTwo;
-import cucumber.api.java.ca.Cal;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;

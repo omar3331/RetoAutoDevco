@@ -2,7 +2,6 @@ package com.devco.travelocity.questions;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
-import net.serenitybdd.screenplay.actions.Scroll;
 
 import static com.devco.travelocity.userinterfaces.HotelsPage.*;
 

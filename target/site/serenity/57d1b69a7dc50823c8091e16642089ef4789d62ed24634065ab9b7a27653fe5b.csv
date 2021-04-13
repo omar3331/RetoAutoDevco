@@ -1,2 +1,3 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Select flights in travelocity","Selecting the round trip","SUCCESS","2021-04-12T15:52:16.013-05:00[America/Bogota]","0.0","103.65"
+"Select flights in travelocity","Selecting the round trip","SUCCESS","2021-04-12T20:32:44.941-05:00[America/Bogota]","0.0","86.09"
+"Search vacation rentals travelocity page","Fail to Search vacations rentals nera home","SUCCESS","2021-04-12T20:39:14.987-05:00[America/Bogota]","0.0","27.04"

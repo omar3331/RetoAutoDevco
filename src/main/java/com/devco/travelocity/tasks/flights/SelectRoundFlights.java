@@ -7,7 +7,6 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 
 import static com.devco.travelocity.userinterfaces.AvailableFlightsPage.*;
-import static com.devco.travelocity.userinterfaces.AvailableFlightsPage.IGNORE_SEARCH;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class SelectRoundFlights implements Task {

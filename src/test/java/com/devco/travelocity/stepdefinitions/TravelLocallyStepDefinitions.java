@@ -1,6 +1,8 @@
 package com.devco.travelocity.stepdefinitions;
 
 import com.devco.travelocity.questions.HotelNearHome;
+import com.devco.travelocity.questions.TheErrorMessage;
+import com.devco.travelocity.tasks.vacationsrentals.PerformThe;
 import com.devco.travelocity.tasks.vacationsrentals.SearchVacations;
 import com.devco.travelocity.tasks.vacationsrentals.SelectTheFirst;
 import com.devco.travelocity.tasks.vacationsrentals.SelectVacations;
@@ -35,5 +37,21 @@ public class TravelLocallyStepDefinitions {
                 seeThat(HotelNearHome.caracteristics())
         );
     }
+
+    @When("^he search without introduce a city$")
+    public void heSearchWithoutIntroduceACity() {
+        theActorInTheSpotlight().attemptsTo(
+                PerformThe.search()
+        );
+    }
+
+
+    @Then("^he can see the error message \"([^\"]*)\" in the screen$")
+    public void heCanSeeTheErrorMessageInTheScreen(String message) {
+        theActorInTheSpotlight().should(
+                seeThat(TheErrorMessage.inScreen(message))
+        );
+    }
+
 
 }

@@ -20,3 +20,9 @@ Feature: Select flights in travelocity
     Given the user want to select a round trip between "medellin" and "San Andres"
     When he selected the shortest flights
     Then he check both of them flights "selected"
+
+  @tag3
+  Scenario: Fail to search a flight
+    Given the user is in travelocity page, select a one way flight
+    When he search a flight without destiny city
+    Then he can see the error message "To continue, please correct the error below."

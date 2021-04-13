@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Select things to do in travelocity page" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-04-12T20:55:49" hostname="CPX-SJVA8S2J89K" time="69.099">
+<testsuite name="Select things to do in travelocity page" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-04-13T01:40:59" hostname="CPX-SJVA8S2J89K" time="90.429">
   <properties/>
-  <testcase name="Select things to do in a city" classname="Select things to do in travelocity page" time="69.099"/>
+  <testcase name="Select things to do in a city" classname="Select things to do in travelocity page" time="90.429"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Apr 12, 2021 3:55:49 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+  <system-err><![CDATA[Apr 12, 2021 8:41:00 PM org.openqa.selenium.remote.DesiredCapabilities chrome
 INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-[1618260950.851][WARNING]: This version of ChromeDriver has not been tested with Chrome version 89.
-Apr 12, 2021 3:55:51 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+Starting ChromeDriver 88.0.4324.27 (6347fe8bf1e48bd0c54d07dc55ca011cf40861c9-refs/branch-heads/4324@{#450}) on port 20419
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1618278064.670][WARNING]: This version of ChromeDriver has not been tested with Chrome version 89.
+Apr 12, 2021 8:41:05 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
         __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  

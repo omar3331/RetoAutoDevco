@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.css">
+<link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/v4-shims.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.css">
+<link rel="stylesheet" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Prueba de Serenity con ScreenPlay</span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="cadf6eb49dc7af7fcf42e852b9a82f1c7efc60fe4286c487f360116d1de97707.html">Search Vacation Rentals Travelocity Page</a></span>
+                > <span class="truncate-60"><a
+                    href="d2a2b5d53ccd020c0df4008c69e17da04acd77f2698055a61810b08e4678c1f5.html">Search vacations rentals near home in travelocity page </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 12-04-2021 20:38</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Search Vacation Rentals Travelocity Page </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="bca18eb34184f466810ee7a90d04748e21a2df6dea7311083e75ce6b8ed2a2f5.html">Tag1
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Search vacations rentals near home in travelocity page
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="96c16ab7487356fb4cca728231b77e35533ab5ff3b3c9d8b5839583eff4f728c.png" title="Omar opens the browser on the Travelocity Home Page" width="1920"/>
+                <img src="6577f7734b85061a05118208f51fc3193429e10fbcae4ff1d65164c615b4e7f4.png" title="Omar opens the Travelocity home page" width="1920"/>
+                <img src="a195802d72baa63b0d4928e12c5759694e9b507972ec723df018509af4b31f75.png" title="Given the user in in travelocity page, access to the option travel locally" width="1920"/>
+                <img src="653194419a4a666fafb90fdb8dc854a1325dc3a6c80d07765713f5326f13efd6.png" title="Given the user in in travelocity page, access to the option travel locally" width="1920"/>
+                <img src="e95719e9b568cb450331290f15edc3a83263426814cd7066a6e644dbaf043524.png" title="Omar clicks on Option to travel locally" width="1920"/>
+                <img src="17323a030ec84a20cddec08d9deee1eedae1b823d5f5adae929689a911af49d6.png" title="Omar clicks on Option to travel locally" width="1920"/>
+                <img src="015bd63a60bff896ec9c9a84bc2ea9f3374231ce7e1e289b479fdb9782258692.png" title="When he search vacation rentals in &quot;armenia&quot; city and select one of them" width="1920"/>
+                <img src="1e6507a58b9293f2794f5f999477ac2ce92d2a2b160bd10cdf09f04f3813ff57.png" title="When he search vacation rentals in &quot;armenia&quot; city and select one of them" width="1920"/>
+                <img src="ebd2fd2b5e9207d4736ba9b0082630a82d99555c5e93797d0bc3f55434b9bacb.png" title="Omar clicks on Button to search vacations rentals" width="1920"/>
+                <img src="9d4c92bdbfd1f4145177ee39750702c428f22d0fdff75a376d41a1273ef8c505.png" title="Omar clicks on Button to search vacations rentals" width="1920"/>
+                <img src="ca2fbbd84f5184451d3ab339f078d24429c4bfe2f8dcec46bd3bc014c8c65a2b.png" title="Omar clicks on Going to input" width="1920"/>
+                <img src="ff454bba5b13bea88c67bb3ca6847469f3be0c46dc8a9d3d0e9d9aa8dcb11151.png" title="Omar clicks on Going to input" width="1920"/>
+                <img src="99723e8d79c8ac8c48ceae21bd09829dd96b9f7aa11af07a61d6b5ec1a4b99c8.png" title="Omar enters 'armenia' into Going to field" width="1920"/>
+                <img src="8b66eebb7fb50bd30c769fed1ddbf9efeefa78265d5814b94ab0f5cbbc71683b.png" title="Omar enters 'armenia' into Going to field" width="1920"/>
+                <img src="197891c1111384b9c1927da5cf7fc9a433e80dc5c233999b3156e77bec11a1f9.png" title="Then First item of going to search should be an element that is enabled" width="1920"/>
+                <img src="22c1d67c81716d9cbed61856a59b324452c01be8d486c822150367614c25df8d.png" title="Omar clicks on First item of going to search" width="1920"/>
+                <img src="524fe1fe526e4bee5ad3f7314b3d8965ee5b4942aee74661fd061babd60ea290.png" title="Omar clicks on First item of going to search" width="1920"/>
+                <img src="524fe1fe526e4bee5ad3f7314b3d8965ee5b4942aee74661fd061babd60ea290.png" title="Omar clicks on Date to travel" width="1920"/>
+                <img src="97107f466b8b9ad06f9b5eea280f13b34dd25e2777c028395cf77b763e69dfe1.png" title="Omar clicks on Date to travel" width="1920"/>
+                <img src="97107f466b8b9ad06f9b5eea280f13b34dd25e2777c028395cf77b763e69dfe1.png" title="Then Calendar to select travel dates should be an element that is present" width="1920"/>
+                <img src="97107f466b8b9ad06f9b5eea280f13b34dd25e2777c028395cf77b763e69dfe1.png" title="Omar clicks on #target" width="1920"/>
+                <img src="5e82035b1d2b1aee4ca2361354c6e27d3ef5d39a24a20725f02210a4c06d6c4e.png" title="Omar clicks on #target" width="1920"/>
+                <img src="5e82035b1d2b1aee4ca2361354c6e27d3ef5d39a24a20725f02210a4c06d6c4e.png" title="Omar clicks on button to select travel dates" width="1920"/>
+                <img src="4dcc16d9fe5c7c3bac4ab1d54718353478d10d89707d1270a1f390d69e365860.png" title="Omar clicks on button to select travel dates" width="1920"/>
+                <img src="4dcc16d9fe5c7c3bac4ab1d54718353478d10d89707d1270a1f390d69e365860.png" title="Omar clicks on Date to travel" width="1920"/>
+                <img src="5e82035b1d2b1aee4ca2361354c6e27d3ef5d39a24a20725f02210a4c06d6c4e.png" title="Omar clicks on Date to travel" width="1920"/>
+                <img src="5e82035b1d2b1aee4ca2361354c6e27d3ef5d39a24a20725f02210a4c06d6c4e.png" title="Then Calendar to select travel dates should be an element that is present" width="1920"/>
+                <img src="5e82035b1d2b1aee4ca2361354c6e27d3ef5d39a24a20725f02210a4c06d6c4e.png" title="Omar clicks on #target" width="1920"/>
+                <img src="31258a2e47d410a6fba394238239c79d585523aae77b3fe8b5dd3a58436d3591.png" title="Omar clicks on #target" width="1920"/>
+                <img src="31258a2e47d410a6fba394238239c79d585523aae77b3fe8b5dd3a58436d3591.png" title="Omar clicks on button to select travel dates" width="1920"/>
+                <img src="c89f4bf90944d0b31d5891a28f08f043cca7d87a90b5f84451336491ca09a0de.png" title="Omar clicks on button to select travel dates" width="1920"/>
+                <img src="c89f4bf90944d0b31d5891a28f08f043cca7d87a90b5f84451336491ca09a0de.png" title="Omar clicks on Button to select the amount of persons for vacations rentals" width="1920"/>
+                <img src="ac903487f01f5c300b9c5aaae747436f951fca86a215127645c8baa30971d7b5.png" title="Omar clicks on Button to select the amount of persons for vacations rentals" width="1920"/>
+                <img src="ac903487f01f5c300b9c5aaae747436f951fca86a215127645c8baa30971d7b5.png" title="Omar clicks on Button to increase the amount of travelers" width="1920"/>
+                <img src="23fdcc87abfb43ab9f478b24567fcab47f290c7b56eaf1774d063a89d6ab52de.png" title="Omar clicks on Button to increase the amount of travelers" width="1920"/>
+                <img src="23fdcc87abfb43ab9f478b24567fcab47f290c7b56eaf1774d063a89d6ab52de.png" title="Omar clicks on Button to increase the amount of rooms" width="1920"/>
+                <img src="3b0b5192e0936b077516f8819d6dd261377932bee52f35b21fa0f3f84c63f428.png" title="Omar clicks on Button to increase the amount of rooms" width="1920"/>
+                <img src="3b0b5192e0936b077516f8819d6dd261377932bee52f35b21fa0f3f84c63f428.png" title="Omar clicks on Button to confirm the amount of travelers" width="1920"/>
+                <img src="6f28c2e54997b4c140a09c40d0293b64af2f1a44702de84effd1a55b0c35cc21.png" title="Omar clicks on Button to confirm the amount of travelers" width="1920"/>
+                <img src="6f28c2e54997b4c140a09c40d0293b64af2f1a44702de84effd1a55b0c35cc21.png" title="Omar clicks on button to perform the search" width="1920"/>
+                <img src="9edfe1ed1ca4e8d237233f0224bcd9d962f290bb2db15521958ce1a39e8e0dec.png" title="Omar clicks on button to perform the search" width="1920"/>
+                <img src="941c05f2e74abea335d010de684bfe612982232fa47be4499b14627e3663785c.png" title="Omar clicks on Selecting the first hotel of the list" width="1920"/>
+                <img src="d9198f5e6903035e01ad6a33ac895bcc6462a4ea613f494a13fb337c12bf891c.png" title="Omar clicks on Selecting the first hotel of the list" width="1920"/>
+                <img src="162caf9279335fc3eeb2180fd1778bc4c73d84f778aa69edb8510a3c57358c95.png" title="Then he can see the important information of he selected" width="1920"/>
+                <img src="124af4dcd4355b0f9aefd60e33539e425651415d6fc4f4f5853774e3fb00abba.png" title="Then hotel near home" width="1920"/>
+                <img src="162caf9279335fc3eeb2180fd1778bc4c73d84f778aa69edb8510a3c57358c95.png" title="Then hotel near home: <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.0.11</span>
+</div>
+</body>
+</html>

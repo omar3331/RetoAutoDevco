@@ -2,11 +2,9 @@ package com.devco.travelocity.stepdefinitions;
 
 import com.devco.travelocity.models.BetweenModel;
 import com.devco.travelocity.questions.Selected;
-import com.devco.travelocity.tasks.*;
-import com.devco.travelocity.tasks.flights.SelectCities;
-import com.devco.travelocity.tasks.flights.SelectFlight;
-import com.devco.travelocity.tasks.flights.SelectRound;
-import com.devco.travelocity.tasks.flights.SelectRoundFlights;
+import com.devco.travelocity.questions.TheError;
+import com.devco.travelocity.tasks.OpenTheBrowser;
+import com.devco.travelocity.tasks.flights.*;
 import com.devco.travelocity.userinterfaces.TravelocityHomePage;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -15,9 +13,11 @@ import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
+import static net.serenitybdd.screenplay.EventualConsequence.eventually;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+import static org.hamcrest.Matchers.equalTo;
 
 public class SearchFlightStepDefinitions {
 
@@ -74,6 +74,28 @@ public class SearchFlightStepDefinitions {
     public void heCheckBothOfThemFlights(String type) {
         theActorInTheSpotlight().should(
                 seeThat(Selected.flight(type))
+        );
+    }
+
+    @Given("^the user is in travelocity page, select a one way flight$")
+    public void theUserIsInTravelocityPageSelectAOneWayFlight() {
+        theActorInTheSpotlight().wasAbleTo(
+                SelectOneWay.Flight()
+        );
+    }
+
+    @When("^he search a flight without destiny city$")
+    public void heSearchAFlightWithoutDestinyCity() {
+        theActorInTheSpotlight().attemptsTo(
+                SearchWithout.destinyCity()
+        );
+
+    }
+
+    @Then("^he can see the error message \"([^\"]*)\"$")
+    public void heCanSeeTheErrorMessage(String message) {
+        theActorInTheSpotlight().should(
+                eventually(seeThat(TheError.message(), equalTo(message)))
         );
     }
 

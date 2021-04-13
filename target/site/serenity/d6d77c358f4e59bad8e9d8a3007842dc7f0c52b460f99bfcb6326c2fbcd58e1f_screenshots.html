@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.css">
+<link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/v4-shims.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.css">
+<link rel="stylesheet" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Prueba de Serenity con ScreenPlay</span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="b6a3eaa6aca2f071826d26d9013ad7edc43177d3a8998d98aa1ec00fd175be91.html">Select Flights In Travelocity</a></span>
+                > <span class="truncate-60"><a
+                    href="d6d77c358f4e59bad8e9d8a3007842dc7f0c52b460f99bfcb6326c2fbcd58e1f.html">Fail to search a flight </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 12-04-2021 20:34</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Select Flights In Travelocity </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="4e9343d20c172a4f0517b74412de045d42d0e6124672772f601b44619d0d2e2f.html">Tag3
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Fail to search a flight
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="4158a7b3132762a0daba1bfbb3051b89625888c5172c79053914331e16b66515.png" title="Omar opens the browser on the Travelocity Home Page" width="1920"/>
+                <img src="985ba3ef8ba8a619e67210318b7d2dcff41851cc8c8e45aeeb605a3b06d4033f.png" title="Omar opens the Travelocity home page" width="1920"/>
+                <img src="7402696c68e55ddb7242c842e4c28f2b9de60d9a260394a00500cb017de15c25.png" title="Given the user is in travelocity page, select a one way flight" width="1920"/>
+                <img src="6a2678787857661ecfa86148d5322ec3606e28913c0bfc99b1e7d6638b3749b1.png" title="Omar clicks on Button flights" width="1920"/>
+                <img src="b0185dd66a0c894a4fd7797715ff2b61f4d8c414a36b5788356e8ff09bc85d86.png" title="Omar clicks on button one way" width="1920"/>
+                <img src="7402696c68e55ddb7242c842e4c28f2b9de60d9a260394a00500cb017de15c25.png" title="Omar clicks on button one way" width="1920"/>
+                <img src="4e867984d0fabe79bc95c874ae10b67287a07899bb85a13b324c445ab7110f50.png" title="When he search a flight without destiny city" width="1920"/>
+                <img src="f3ffd680b68860a817fe7c2f02ba1f3f0890bca2ff2e37bc96afa19022325e61.png" title="Omar clicks on Origin city field" width="1920"/>
+                <img src="e208211572d74c3f6dfcb4e2ee2b98e578447cb11d442ab12aa2763d4891e7c2.png" title="Omar enters 'Peru' into Origin city text field" width="1920"/>
+                <img src="228001a76bc1b367f90707d35fe6e1b34ee0961d3a13380aea19a43a5ddb7384.png" title="Omar enters 'Peru' into Origin city text field" width="1920"/>
+                <img src="f66527a7e948f0a9791e244a5cf2b8df06ed5ba4bf2d7236825664c839a08291.png" title="Then The first item on the list origin should be an element that is enabled" width="1920"/>
+                <img src="f66527a7e948f0a9791e244a5cf2b8df06ed5ba4bf2d7236825664c839a08291.png" title="Omar clicks on The first item on the list origin" width="1920"/>
+                <img src="0183ff00c21909e5e1d79afa2b48e6b15fa0a5924bf416ddc94912a018604e52.png" title="Omar clicks on The first item on the list origin" width="1920"/>
+                <img src="0183ff00c21909e5e1d79afa2b48e6b15fa0a5924bf416ddc94912a018604e52.png" title="Omar clicks on button to perform the search" width="1920"/>
+                <img src="4e867984d0fabe79bc95c874ae10b67287a07899bb85a13b324c445ab7110f50.png" title="Omar clicks on button to perform the search" width="1920"/>
+                <img src="4e867984d0fabe79bc95c874ae10b67287a07899bb85a13b324c445ab7110f50.png" title="Then he can see the error message &quot;To continue, please correct the error below.&quot;" width="1920"/>
+                <img src="4e867984d0fabe79bc95c874ae10b67287a07899bb85a13b324c445ab7110f50.png" title="Then the error should be 'To continue, please correct the error below.': <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.0.11</span>
+</div>
+</body>
+</html>

@@ -148,7 +148,7 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [{"text":"Select flights in travelocity","type":"feature","href":"b6a3eaa6aca2f071826d26d9013ad7edc43177d3a8998d98aa1ec00fd175be91.html","nodes":[],"selectable":false,"tags":["","\u003cspan class\u003d\u0027feature-count\u0027\u003e2 scenarios\u003c/span\u003e"]}];
+            var requirementsTree = [{"text":"Select flights in travelocity","type":"feature","href":"b6a3eaa6aca2f071826d26d9013ad7edc43177d3a8998d98aa1ec00fd175be91.html","nodes":[],"selectable":false,"tags":["","\u003cspan class\u003d\u0027feature-count\u0027\u003e3 scenarios\u003c/span\u003e"]}];
 
             $('#tree').treeview({
                 data: requirementsTree,
@@ -217,7 +217,7 @@
             <a href="#"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 12-04-2021 15:46</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 12-04-2021 20:29</span>
     <br style="clear:left"/>
 </div>
 
@@ -242,7 +242,7 @@
                                                     <span class="badge tag-badge" style="background:default;">
                                                         <i class="fa fa-tag"></i>&nbsp;<a class="tagLink"
                                                                                           style="background:default;"
-                                                                                          href="57d1b69a7dc50823c8091e16642089ef4789d62ed24634065ab9b7a27653fe5b.html">Tag2
+                                                                                          href="4e9343d20c172a4f0517b74412de045d42d0e6124672772f601b44619d0d2e2f.html">Tag3
                                                         (tag)</a>
                                                     </span>
                                                 </p>
@@ -343,6 +343,35 @@
                                                                 </table>
                                                             </td>
                                                         </tr>
+                                                        <tr>
+                                                            <td style="width:95%;" class="toc-title">
+                                                                <a href="#2b8fd984fa914dedbec3443b87272ea5ad45879b7965bad2ad266aad864f8daf" title="View scenario details" >Fail to search a flight</a>
+
+
+                                                            </td>
+                                                            <td style="width:5%;">
+                                                                <table>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                               href="d6d77c358f4e59bad8e9d8a3007842dc7f0c52b460f99bfcb6326c2fbcd58e1f.html"
+                                                                               title="View test results">
+                                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                                                            </a>
+
+                                                                        
+                                                                        </td>
+                                                                        <td>
+                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                               href="d6d77c358f4e59bad8e9d8a3007842dc7f0c52b460f99bfcb6326c2fbcd58e1f.html"
+                                                                               title="View test results">
+                                                                                <i class="fas fa-search-plus"></i>
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
                                                 </table>
 
                                             </div>
@@ -405,6 +434,29 @@
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                                <div class="scenario-docs card" id="2b8fd984fa914dedbec3443b87272ea5ad45879b7965bad2ad266aad864f8daf">
+                                                    <div class="scenario-docs card-header success" style="min-height:1.5em;">
+                                                        <div>
+                                                            <span class="scenario-heading">
+                                                                <a href="d6d77c358f4e59bad8e9d8a3007842dc7f0c52b460f99bfcb6326c2fbcd58e1f.html" title="View test results">Fail to search a flight</a>
+                                                            </span>
+                                                            <span class="scenario-result-icon">
+                                                                
+
+                                                                    <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Omar opens the browser on the Travelocity Home Page</p>
+                                                            <p>Given the user is in travelocity page, select a one way flight</p>
+                                                            <p>When he search a flight without destiny city</p>
+                                                            <p>Then he can see the error message &quot;To continue, please correct the error below.&quot;</p>
+                                                        <div class="examples">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -423,7 +475,7 @@
                                                 var labels = ['100%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
                                                 // Our series array that contains series objects or in this case series data arrays
 
-                                                var series = [{meta: 'Passing tests (automated)', value: 4}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
+                                                var series = [{meta: 'Passing tests (automated)', value: 5}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
 
                                                 // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
                                                 // as you saw in the previous example
@@ -464,7 +516,7 @@
                                                                         <a href="2e13be52d4cf31233ede2f5bf9e16df150f11856a5b7e8420f9886cf443d0853.html"><i
                                                                                 class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing</a>
                                                                     </td>
-                                                <td class="automated-stats">4</td>
+                                                <td class="automated-stats">5</td>
                                                 <td class="automated-stats">100%</td>
                                             </tr>
                                             <tr>
@@ -519,7 +571,7 @@
                                             </tr>
                                             <tr class="summary-stats">
                                                 <td class="aggregate-result-count">Total</td>
-                                                <td class="automated-stats">4</td>
+                                                <td class="automated-stats">5</td>
                                                 <td class="automated-stats"></td>
                                             </tr>
                                             </tbody>
@@ -541,11 +593,11 @@
                                                     </thead>
                                                     <tbody>
                                                     <tr>
-                                                        <td> 6m 49s</td>
-                                                        <td> 5m 22s</td>
-                                                        <td> 1m 8s</td>
-                                                        <td> 2m 5s</td>
-                                                        <td> 3m 24s</td>
+                                                        <td> 5m 10s</td>
+                                                        <td> 4m 50s</td>
+                                                        <td>36s</td>
+                                                        <td> 1m 26s</td>
+                                                        <td> 1m 43s</td>
                                                     </tr>
                                                     </tbody>
                                                 </table>
@@ -574,8 +626,8 @@
                                                                (3 examples)
                                                     </td>
                                                     <td>3</td>
-                                                    <td>15:46:53</td>
-                                                    <td>5m 6s</td>
+                                                    <td>20:29:20</td>
+                                                    <td>3m 7s</td>
                                                     <td>
                                                             <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
                                                                 style="display:none">SUCCESS</span>
@@ -586,8 +638,20 @@
                                                             <a href="40f6551318031843f24d62d79aa9c250d5b487aa6dfcc0ad10c74cc0a4726788.html">Selecting the round trip</a>
                                                     </td>
                                                     <td>4</td>
-                                                    <td>15:52:16</td>
-                                                    <td>1m 44s</td>
+                                                    <td>20:32:44</td>
+                                                    <td>1m 26s</td>
+                                                    <td>
+                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                style="display:none">SUCCESS</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="d6d77c358f4e59bad8e9d8a3007842dc7f0c52b460f99bfcb6326c2fbcd58e1f.html">Fail to search a flight</a>
+                                                    </td>
+                                                    <td>4</td>
+                                                    <td>20:34:11</td>
+                                                    <td>36s 989ms</td>
                                                     <td>
                                                             <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
                                                                 style="display:none">SUCCESS</span>
