@@ -5,6 +5,7 @@ import com.devco.travelocity.interactions.SwitchTo;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
+import net.thucydides.core.annotations.Step;
 
 import static com.devco.travelocity.userinterfaces.RoamNearHomePage.FIRST_HOTEL_OF_LIST;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
@@ -17,6 +18,7 @@ public class SelectTheFirst implements Task {
     }
 
     @Override
+    @Step("{3} select the first hotel of the search performed")
     public <T extends Actor> void performAs(T actor) {
         try {
             actor.attemptsTo(

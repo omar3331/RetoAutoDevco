@@ -6,6 +6,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Scroll;
+import net.thucydides.core.annotations.Step;
 
 import static com.devco.travelocity.userinterfaces.HotelsPage.BEDROOMS_SELECT;
 import static com.devco.travelocity.userinterfaces.HotelsPage.FIVE_STARS_SELECT;
@@ -31,6 +32,7 @@ public class SelectTheBest implements Task {
     }
 
     @Override
+    @Step("{2} select a hotel of the list")
     public <T extends Actor> void performAs(T actor) {
         try {
             actor.attemptsTo(

@@ -9,6 +9,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import net.thucydides.core.annotations.Step;
 
 import static com.devco.travelocity.userinterfaces.TravelocityHomePage.CALENDAR;
 import static com.devco.travelocity.userinterfaces.TravelocityHomePage.DEPARTURE_DAY;
@@ -44,6 +45,7 @@ public class SelectCities implements Task {
     }
 
     @Override
+    @Step("{1} select cities and one way flight on the available flight")
     public <T extends Actor> void performAs(T actor) {
 
         travelDay = Date.start(NEXT_DAYS);

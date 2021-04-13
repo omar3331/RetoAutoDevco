@@ -7,6 +7,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import net.thucydides.core.annotations.Step;
 
 import static com.devco.travelocity.userinterfaces.TravelocityHomePage.DECREASE_AMOUNT_TRAVELERS_BUTTON;
 import static com.devco.travelocity.userinterfaces.TravelocityHomePage.DEPARTURE_DAY;
@@ -37,6 +38,7 @@ public class Reserving implements Task {
     }
 
     @Override
+    @Step("{1} introduce data to reserve a hotel")
     public <T extends Actor> void performAs(T actor) {
 
         try {

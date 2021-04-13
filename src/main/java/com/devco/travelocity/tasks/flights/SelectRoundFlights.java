@@ -5,6 +5,7 @@ import com.devco.travelocity.interactions.SwitchTo;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
+import net.thucydides.core.annotations.Step;
 
 import static com.devco.travelocity.userinterfaces.AvailableFlightsPage.CONTINUE_BUTTON;
 import static com.devco.travelocity.userinterfaces.AvailableFlightsPage.EARLY_DEPARTURE_OPTION;
@@ -41,6 +42,7 @@ public class SelectRoundFlights implements Task {
     }
 
     @Override
+    @Step("{2} select a round flight of the list")
     public <T extends Actor> void performAs(T actor) {
 
         try {

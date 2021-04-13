@@ -6,6 +6,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Scroll;
+import net.thucydides.core.annotations.Step;
 
 import static com.devco.travelocity.userinterfaces.ThingsToDoPage.ATTRACTIONS_CARD;
 import static com.devco.travelocity.userinterfaces.ThingsToDoPage.ATTRACTION_CARD_TWO;
@@ -31,6 +32,7 @@ public class SelectThings implements Task {
     }
 
     @Override
+    @Step("{2} select things to do in a period")
     public <T extends Actor> void performAs(T actor) {
 
         try {

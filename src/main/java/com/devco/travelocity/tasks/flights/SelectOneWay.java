@@ -4,6 +4,7 @@ import com.devco.travelocity.exceptions.CanNotFindTheElementOfThePageException;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
+import net.thucydides.core.annotations.Step;
 
 import static com.devco.travelocity.userinterfaces.TravelocityHomePage.FLIGHTS_BUTTON;
 import static com.devco.travelocity.userinterfaces.TravelocityHomePage.ONE_WAY_BUTTON;
@@ -17,6 +18,7 @@ public class SelectOneWay implements Task {
     }
 
     @Override
+    @Step("{1} select a one way option in home page")
     public <T extends Actor> void performAs(T actor) {
 
         try {

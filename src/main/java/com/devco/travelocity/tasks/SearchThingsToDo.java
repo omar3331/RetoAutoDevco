@@ -7,6 +7,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import net.thucydides.core.annotations.Step;
 
 import static com.devco.travelocity.userinterfaces.TravelocityHomePage.DEPARTURE_DAY;
 import static com.devco.travelocity.userinterfaces.TravelocityHomePage.FIRST_ITEM_THINGS_TO_DO;
@@ -34,6 +35,7 @@ public class SearchThingsToDo implements Task {
     }
 
     @Override
+    @Step("{1} search things to do in a period")
     public <T extends Actor> void performAs(T actor) {
 
         try {

@@ -4,6 +4,7 @@ import com.devco.travelocity.exceptions.CanNotFindTheElementOfThePageException;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
+import net.thucydides.core.annotations.Step;
 
 import static com.devco.travelocity.userinterfaces.RoamNearHomePage.VACATION_RENTALS_BUTTON;
 import static com.devco.travelocity.userinterfaces.TravelocityHomePage.SEARCH_BUTTON;
@@ -17,6 +18,7 @@ public class PerformThe implements Task {
     }
 
     @Override
+    @Step("{2} search of vacations rentals")
     public <T extends Actor> void performAs(T actor) {
         try {
             actor.attemptsTo(

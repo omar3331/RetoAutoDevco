@@ -5,6 +5,7 @@ import com.devco.travelocity.tasks.flights.SelectFlight;
 import com.devco.travelocity.tasks.flights.SelectRoundFlights;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
+import net.thucydides.core.annotations.Step;
 
 import static com.devco.travelocity.userinterfaces.AvailableFlightsPage.DEPARTURE_FLIGHT_TIME_SELECTED;
 import static com.devco.travelocity.userinterfaces.AvailableFlightsPage.RETURN_FLIGHT_TIME_SELECTED;
@@ -24,6 +25,7 @@ public class Selected implements Question<Boolean> {
     }
 
     @Override
+    @Step("{3} validate the flight selected")
     public Boolean answeredBy(Actor actor) {
         try {
             departureHour = DEPARTURE_FLIGHT_TIME_SELECTED.resolveFor(actor).getText();

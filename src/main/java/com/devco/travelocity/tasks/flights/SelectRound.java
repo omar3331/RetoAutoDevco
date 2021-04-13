@@ -8,6 +8,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import net.thucydides.core.annotations.Step;
 
 import static com.devco.travelocity.userinterfaces.TravelocityHomePage.DEPARTURE_DAY;
 import static com.devco.travelocity.userinterfaces.TravelocityHomePage.DESTINY_FIELD_INPUT;
@@ -37,6 +38,7 @@ public class SelectRound implements Task {
     }
 
     @Override
+    @Step("{1} search a round flight")
     public <T extends Actor> void performAs(T actor) {
 
         try {

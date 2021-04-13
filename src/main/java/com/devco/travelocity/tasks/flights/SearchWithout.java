@@ -6,6 +6,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import net.thucydides.core.annotations.Step;
 
 import static com.devco.travelocity.userinterfaces.TravelocityHomePage.FIRST_ITEM_ORIGIN;
 import static com.devco.travelocity.userinterfaces.TravelocityHomePage.ORIGIN_FIELD_INPUT;
@@ -25,6 +26,7 @@ public class SearchWithout implements Task {
     }
 
     @Override
+    @Step("{2} search flight without introduce a destiny city")
     public <T extends Actor> void performAs(T actor) {
 
         try {
